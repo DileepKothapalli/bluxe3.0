@@ -9,7 +9,7 @@ export const HeadingFramer = {
     transition: {
       type: "spring",
       bounce: 0.4,
-      duration: 0.3,
+      duration: 1.3,
     },
   },
 };

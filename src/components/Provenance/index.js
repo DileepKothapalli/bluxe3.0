@@ -169,19 +169,13 @@ const Studio = () => {
 
   return (
     <Div id="studio">
-      <Container ref={element}>
+      <Container
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.4 }}
+      >
         <HeadingContainer>
-          <StudioHeading
-            variants={HeadingFramer}
-            animate={controls}
-            transition={{
-              duration: 0.1,
-              bounce: 1.3,
-              ease: "easeInOut",
-            }}
-          >
-            Provenance
-          </StudioHeading>
+          <StudioHeading variants={HeadingFramer}>Provenance</StudioHeading>
         </HeadingContainer>
         <BodyContainer>
           <StudioWrapper
@@ -190,7 +184,7 @@ const Studio = () => {
             exit="exit"
             variants={LeftCardFramer}
             viewport={{
-              once: false,
+              once: true,
               amount: width,
               margin: "0px 0px -150px 0px",
             }}
@@ -225,7 +219,7 @@ const Studio = () => {
             exit="exit"
             variants={LeftCardFramer}
             viewport={{
-              once: false,
+              once: true,
               amount: width,
               margin: "0px 0px -10px 0px",
             }}
@@ -265,7 +259,7 @@ const Studio = () => {
             whileInView="visible"
             exit="exit"
             variants={LeftCardFramer}
-            viewport={{ once: false, amount: 1 }}
+            viewport={{ once: true, amount: 1 }}
           >
             <StoryText>
               As we head towards future of fashion, we are launching our first
@@ -285,7 +279,7 @@ const Studio = () => {
                 initial="hidden"
                 whileInView="visible"
                 variants={RightCardFramer}
-                viewport={{ once: false, amount: 0.9 }}
+                viewport={{ once: true, amount: 0.9 }}
                 loop
                 autoPlay
                 muted

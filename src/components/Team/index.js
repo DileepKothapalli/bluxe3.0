@@ -24,8 +24,12 @@ const Team = () => {
   return (
     <Div id="team">
       <Container>
-        <MainContainer>
-          <Title>TEAM</Title>
+        <MainContainer
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <Title variants={HeadingFramer}>TEAM</Title>
           <CardWrapper>
             <CardsContainer
               initial="hidden"

@@ -387,14 +387,24 @@ const Faq = () => {
 
   return (
     <Div id="faq">
-      <BodyContainer>
+      <BodyContainer
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+      >
         <HeadContainer>
-          <Heading> FAQ</Heading>
+          <Heading variants={HeadingFramer}> FAQ</Heading>
         </HeadContainer>
         <TopContainer>
           <HalfDivl>
             <QuestionsContainer>
-              <QuestionDiv variants={CardFramer} onClick={handleMouseEnter1}>
+              <QuestionDiv
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.8 }}
+                variants={CardFramer}
+                onClick={handleMouseEnter1}
+              >
                 <QuestionContainer>
                   <Question mouse={mouse1}>What is Bluxe?</Question>
                   <Icon src={iconPlus} direction={mouse1} />
