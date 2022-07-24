@@ -1,0 +1,9 @@
+.heade {
+  /* background: rgb(0, 0, 0); */
+  overflow-x: hidden;
+  /* Track */
+}
+
+.heade::-webkit-scrollbar {
+  display: none;
+}
